@@ -25,7 +25,7 @@ correct_answers_index = [1, 2, 0, 3, 1]
 puntos = 0
 # El usuario deberá contestar 3 preguntas
 # Creó una lista en base a las 3 listas con zip y elijo un índice común para cada una de ellas y así tengan una relación entre sí
-questions_to_ask = random.choices(list(zip(questions, answers, correct_answers_index)), k=3)
+questions_to_ask = random.sample(list(zip(questions, answers, correct_answers_index)), k=3)
 for question, answer, correct_answers in questions_to_ask:
     # Se muestra la pregunta y las respuestas posibles
     print(question)
